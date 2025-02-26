@@ -38,7 +38,7 @@ class VoiceShopper extends HTMLElement {
         if (!message) return;
         this.displayMessage("You", "Send Message");
         
-        if (message.contains("search")) {
+        if (message.includes("search")) {
             let query = message.replace("search", "").trim();
             let searchBox = document.querySelector("[name='q']");
             if (searchBox) {
